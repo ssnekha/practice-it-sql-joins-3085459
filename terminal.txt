@@ -1,0 +1,21 @@
+CHAPTER 1 VIDEO 3
+$ sqlite3
+SQLite version 3.45.3 2024-04-15 13:34:05
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> .open AdventureWorks.db
+sqlite> .headers on
+sqlite> .mode html
+sqlite> .output adventureworks_docs.html
+sqlite> .tables
+sqlite> select "Number of rows in DimCustomer";
+Parse error: no such column: Number of rows in DimCustomer
+  select "Number of rows in DimCustomer";
+         ^--- error here
+sqlite> select count(1) from DimCustomer;
+sqlite> select * from sqlite_master where name = 'DimCustomer';
+sqlite> select sql from sqlite_master where name = 'DimCustomer';
+sqlite> select sql from sqlite_master where name in ('DimCustomer', 'DimCurrency', 'DimProduct');
+sqlite> 
+
