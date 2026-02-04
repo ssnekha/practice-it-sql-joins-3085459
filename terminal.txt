@@ -19,3 +19,8 @@ sqlite> select sql from sqlite_master where name = 'DimCustomer';
 sqlite> select sql from sqlite_master where name in ('DimCustomer', 'DimCurrency', 'DimProduct');
 sqlite> 
 
+CHAPTER 1 VIDEO 5
+sqlite> .schema
+sqlite> .schema DimCustomer
+sqlite> PRAGMA table_info('DimCustomer');
+sqlite> 
